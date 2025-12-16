@@ -343,3 +343,307 @@ function App() {
 }
 
 export default App;
+Ni byiza cyane Aline 🔥
+Ubu ngiye kuguha CSS YUZUYE (FINAL PREMIUM) ya About & Contact pages:
+👉 clear, 👉 real, 👉 responsive (mobile / tablet / desktop),
+👉 harimo animations, cards, spacing nziza, professional look.
+
+👉 KOPIYA UYISHYIRE MURI styles.css (cyangwa about-contact.css niba wabigabanyije).
+
+
+---
+
+🎨 FINAL CSS – ABOUT & CONTACT (PREMIUM)
+
+/* ========== GLOBAL HELPERS ========== */
+.about-page,
+.contact-page {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ========== HERO SECTIONS ========== */
+.about-hero,
+.contact-hero {
+  min-height: 60vh;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+.about-hero h1,
+.contact-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.about-hero span,
+.contact-hero span {
+  color: #22c55e;
+}
+
+.about-hero p,
+.contact-hero p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ========== SECTIONS ========== */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 80px 8%;
+  align-items: center;
+}
+
+.about-section img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+  animation: slideUp 1s ease;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+/* ========== WHY US ========== */
+.why-us {
+  background: white;
+  padding: 80px 6%;
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.why-card {
+  padding: 30px 20px;
+  border-radius: 18px;
+  background: #f1f5f9;
+  transition: .4s;
+  animation: slideUp .9s ease;
+}
+
+.why-card i {
+  font-size: 32px;
+  color: #22c55e;
+  margin-bottom: 15px;
+}
+
+.why-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+/* ========== PROCESS ========== */
+.process {
+  padding: 90px 6%;
+  background: #020617;
+  color: white;
+  text-align: center;
+}
+
+.process h2 {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.process-step {
+  padding: 35px 25px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(6px);
+  transition: .4s;
+}
+
+.process-step span {
+  font-size: 42px;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.process-step:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,.15);
+}
+
+/* ========== SERVICES SUMMARY ========== */
+.about-services {
+  padding: 80px 6%;
+  background: white;
+  text-align: center;
+}
+
+.about-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.about-service-grid div {
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.about-service-grid i {
+  color: #22c55e;
+  margin-right: 8px;
+}
+
+.about-service-grid div:hover {
+  transform: scale(1.05);
+}
+
+/* ========== CTA ========== */
+.about-cta,
+.contact-cta {
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  text-align: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 40px;
+  background: white;
+  color: #16a34a;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.08);
+}
+
+/* ========== CONTACT INFO ========== */
+.contact-info {
+  padding: 80px 6%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  text-align: center;
+}
+
+.info-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,.1);
+  animation: slideUp .9s ease;
+}
+
+.info-card i {
+  font-size: 32px;
+  color: #22c55e;
+  margin-bottom: 12px;
+}
+
+/* ========== CONTACT FORM ========== */
+.contact-form {
+  background: #f1f5f9;
+  padding: 90px 6%;
+  text-align: center;
+}
+
+.contact-form form {
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5f5;
+  font-size: 15px;
+}
+
+.contact-form button {
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ========== MAP ========== */
+.contact-map {
+  padding: 80px 6%;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 18px;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width: 900px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+
+---
+
+✅ Icyo ubu ufite
+
+✔ About page isa na international agency website
+✔ Contact page yuzuye kandi yoroshye kuyikoresha
+✔ Animations nziza zidahungabanya performance
+✔ Responsive neza kuri mobile / tablet / desktop
+✔ Clean & professional UI
+
+👉 IGIKURIKIRA: ndagushyiramo testimonials section, clients logos carousel, cyangwa SEO meta tags.
+Mbwira uti: “ongeramo …” 🚀
