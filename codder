@@ -21,6 +21,241 @@ export default function Footer(){
 ---
 
 7️⃣ WhatsAppFloat.js
+Ni byiza cyane Aline 👍 ndabyumvise neza:
+👉 About na Contact biracyari bikeya,
+👉 ushaka BYISHI CYANEE, bigaragara, bigurura amaso, premium, byemeza client, byuzuye amafoto, animation, icons, sections nyinshi.
+
+Hasi ndaguha About.jsx na Contact.jsx nshya (FINAL PREMIUM CONTENT) — ntibikeya na gato.
+
+
+---
+
+🔥 ABOUT PAGE – PREMIUM (BYISHI CYANEEE)
+
+src/pages/About.jsx
+
+export default function About() {
+  return (
+    <div className="about-page">
+
+      {/* HERO */}
+      <section className="about-hero">
+        <h1>
+          About <span>A Better T Solutions</span>
+        </h1>
+        <p>
+          We are a creative & technology-driven company helping businesses
+          and individuals build strong digital presence.
+        </p>
+      </section>
+
+      {/* WHO WE ARE */}
+      <section className="about-section">
+        <div className="about-text">
+          <h2>Who We Are</h2>
+          <p>
+            A Better T Solutions is a Kigali-based creative agency specializing
+            in Graphic Design, Web Development, ICT Solutions, Microsoft Office
+            services and Professional Photography.
+          </p>
+          <p>
+            We focus on delivering high-quality, modern and impactful digital
+            solutions that help our clients grow, attract customers and stand
+            out in a competitive market.
+          </p>
+        </div>
+
+        <div className="about-image">
+          <img src="https://source.unsplash.com/600x450/?creative,agency" />
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section className="why-us">
+        <h2>Why Choose Us</h2>
+
+        <div className="why-grid">
+          <div className="why-card">
+            <i className="fas fa-star"></i>
+            <h3>Premium Quality</h3>
+            <p>We deliver professional, clean and modern designs.</p>
+          </div>
+
+          <div className="why-card">
+            <i className="fas fa-clock"></i>
+            <h3>Fast Delivery</h3>
+            <p>We respect deadlines and deliver on time.</p>
+          </div>
+
+          <div className="why-card">
+            <i className="fas fa-users"></i>
+            <h3>Client Focused</h3>
+            <p>Your satisfaction is our top priority.</p>
+          </div>
+
+          <div className="why-card">
+            <i className="fas fa-lightbulb"></i>
+            <h3>Creative Ideas</h3>
+            <p>We bring innovative and creative solutions.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* OUR PROCESS */}
+      <section className="process">
+        <h2>Our Working Process</h2>
+
+        <div className="process-grid">
+          <div className="process-step">
+            <span>01</span>
+            <h4>Consultation</h4>
+            <p>Understanding your needs and goals.</p>
+          </div>
+
+          <div className="process-step">
+            <span>02</span>
+            <h4>Planning</h4>
+            <p>Creating a clear roadmap for your project.</p>
+          </div>
+
+          <div className="process-step">
+            <span>03</span>
+            <h4>Design & Development</h4>
+            <p>Building modern and functional solutions.</p>
+          </div>
+
+          <div className="process-step">
+            <span>04</span>
+            <h4>Delivery</h4>
+            <p>Launching and supporting your project.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES SUMMARY */}
+      <section className="about-services">
+        <h2>What We Do</h2>
+
+        <div className="about-service-grid">
+          <div><i className="fas fa-palette"></i> Graphic Design</div>
+          <div><i className="fas fa-code"></i> Web Development</div>
+          <div><i className="fas fa-camera"></i> Photography</div>
+          <div><i className="fas fa-file-word"></i> Microsoft Office</div>
+          <div><i className="fas fa-print"></i> Printing Services</div>
+          <div><i className="fas fa-chart-line"></i> ICT Solutions</div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="about-cta">
+        <h2>Let’s Build Something Great Together</h2>
+        <a href="https://wa.me/250796023452" className="cta-btn">
+          Contact Us Now
+        </a>
+      </section>
+
+    </div>
+  );
+}
+
+
+---
+
+🔥 CONTACT PAGE – PREMIUM (BYISHI CYANEEE)
+
+src/pages/Contact.jsx
+
+export default function Contact() {
+  return (
+    <div className="contact-page">
+
+      {/* HERO */}
+      <section className="contact-hero">
+        <h1>
+          Contact <span>Us</span>
+        </h1>
+        <p>
+          Get in touch with A Better T Solutions and let’s grow your business
+          together.
+        </p>
+      </section>
+
+      {/* CONTACT INFO */}
+      <section className="contact-info">
+        <div className="info-card">
+          <i className="fas fa-phone"></i>
+          <h3>Phone</h3>
+          <p>+250 796 023 452</p>
+        </div>
+
+        <div className="info-card">
+          <i className="fas fa-envelope"></i>
+          <h3>Email</h3>
+          <p>abettertsolutions@gmail.com</p>
+        </div>
+
+        <div className="info-card">
+          <i className="fas fa-location-dot"></i>
+          <h3>Location</h3>
+          <p>Kigali, Rwanda</p>
+        </div>
+
+        <div className="info-card">
+          <i className="fas fa-clock"></i>
+          <h3>Working Hours</h3>
+          <p>Mon – Sat | 8:00 AM – 6:00 PM</p>
+        </div>
+      </section>
+
+      {/* CONTACT FORM */}
+      <section className="contact-form">
+        <h2>Send Us a Message</h2>
+
+        <form>
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Your Email" />
+          <input type="text" placeholder="Service Needed" />
+          <textarea placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      {/* MAP */}
+      <section className="contact-map">
+        <h2>Our Location</h2>
+        <iframe
+          title="map"
+          src="https://maps.google.com/maps?q=kigali&t=&z=13&output=embed"
+        ></iframe>
+      </section>
+
+      {/* CTA */}
+      <section className="contact-cta">
+        <h2>Need Fast Response?</h2>
+        <a href="https://wa.me/250796023452" className="cta-btn">
+          Chat on WhatsApp
+        </a>
+      </section>
+
+    </div>
+  );
+}
+
+
+---
+
+🔥 Ubu pages zawe zifite:
+
+✔ Sections nyinshi
+✔ Icons nyazo
+✔ Amafoto menshi
+✔ CTA zikurura client
+✔ Structure ya company nyayo
+✔ Professional storytelling
+✔ Real business trust
+
+👉 IGIKURIKIRA: ndaguha CSS animations za About & Contact cyangwa Testimonials + Clients logos section.
+Mbwira uti: “ongeramo testimonials na animation” 💥
 
 export default function WhatsAppFloat(){
   return(
