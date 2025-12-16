@@ -1,231 +1,3 @@
-Ni byiza Aline 👍 ndabyemeye 100%
-👉 TUGIYE GUTANGIRA BUSHYA BURUNDU (FINAL PREMIUM VERSION)
-👉 harimo BYOSE wavuze + 10 text animations + LOGO + services zitandukanyijwe neza + icons + WhatsApp float (0796023452) + responsive hose.
-
-Ndaguha CODE YUZUYE, React + CSS isanzwe, real company website. Uyikopye, uyikoreshe local.
-
-
----
-
-🧱 STRUCTURE YA FINAL PROJECT
-
-src/
- ├── App.js
- ├── data.js
- ├── styles.css
- ├── assets/
- │    └── logo.png   (ushyiremo logo yawe)
- ├── components/
- │    ├── Navbar.js
- │    ├── Footer.js
- │    └── WhatsAppFloat.js
- └── pages/
-      ├── Home.js
-      ├── About.js
-      └── Contact.js
-
-
----
-
-0️⃣ public/index.html (ICONS NYAZO – REQUIRED)
-
-Shyiramo muri <head>
-
-<link
- rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
-
-
----
-
-1️⃣ src/data.js (SERVICES ZOSE ZITANDUKANIJWE)
-
-const services = [
-  {
-    category: "Graphic Design",
-    icon: "fa-palette",
-    items: [
-      { title: "Flyer Design", price: "30,000 RWF", img: "https://source.unsplash.com/400x300/?flyer,design" },
-      { title: "Poster Design", price: "40,000 RWF", img: "https://source.unsplash.com/400x300/?poster,design" },
-      { title: "Logo Design", price: "80,000 RWF", img: "https://source.unsplash.com/400x300/?logo,branding" },
-      { title: "Branding Package", price: "300,000 RWF", img: "https://source.unsplash.com/400x300/?branding,identity" },
-      { title: "Banner & Printing", price: "From 50,000 RWF", img: "https://source.unsplash.com/400x300/?banner,printing" }
-    ]
-  },
-  {
-    category: "Web Development",
-    icon: "fa-code",
-    items: [
-      { title: "Personal Website", price: "500,000 RWF", img: "https://source.unsplash.com/400x300/?portfolio,website" },
-      { title: "Business Website", price: "1,200,000 RWF", img: "https://source.unsplash.com/400x300/?business,website" },
-      { title: "E-Commerce Website", price: "2,000,000 RWF", img: "https://source.unsplash.com/400x300/?ecommerce,website" },
-      { title: "Landing Page", price: "300,000 RWF", img: "https://source.unsplash.com/400x300/?landing,page" }
-    ]
-  },
-  {
-    category: "Microsoft Office",
-    icon: "fa-file-word",
-    items: [
-      { title: "Microsoft Word", price: "Negotiable", img: "https://source.unsplash.com/400x300/?microsoft,word" },
-      { title: "Microsoft Excel", price: "Negotiable", img: "https://source.unsplash.com/400x300/?microsoft,excel" },
-      { title: "Microsoft PowerPoint", price: "Negotiable", img: "https://source.unsplash.com/400x300/?presentation,slides" }
-    ]
-  },
-  {
-    category: "Photography",
-    icon: "fa-camera",
-    items: [
-      { title: "Event Photography", price: "From 150,000 RWF", img: "https://source.unsplash.com/400x300/?event,photography" },
-      { title: "Product Photography", price: "From 100,000 RWF", img: "https://source.unsplash.com/400x300/?product,photography" },
-      { title: "Portrait Photography", price: "From 80,000 RWF", img: "https://source.unsplash.com/400x300/?portrait,photography" }
-    ]
-  }
-];
-
-export default services;
-
-
----
-
-2️⃣ src/components/Navbar.js (LOGO + MENU)
-
-import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
-
-export default function Navbar(){
-  return(
-    <nav className="navbar">
-      <div className="logo">
-        <img src={logo} alt="logo"/>
-        <span>A Better T Solutions</span>
-      </div>
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-      </div>
-    </nav>
-  );
-}
-
-
----
-
-3️⃣ src/pages/Home.js
-
-👉 LANDING PAGE + 10 TEXT ANIMATIONS
-
-import { useEffect, useState } from "react";
-import services from "../data";
-
-export default function Home(){
-  const texts = [
-    "Graphic Design",
-    "Web Development",
-    "Branding Solutions",
-    "Professional Printing",
-    "Business Websites",
-    "E-Commerce Platforms",
-    "Creative Flyers",
-    "Modern Logos",
-    "ICT Services",
-    "Photography"
-  ];
-
-  const [index,setIndex] = useState(0);
-
-  useEffect(()=>{
-    const interval = setInterval(()=>{
-      setIndex((prev)=>(prev+1)%texts.length);
-    },2000);
-    return ()=> clearInterval(interval);
-  },[]);
-
-  return(
-    <>
-      {/* HERO */}
-      <section className="hero">
-        <h1>
-          Premium <span className="animate">{texts[index]}</span>
-        </h1>
-        <p>Digital & Creative Solutions That Grow Your Business</p>
-        <a href="https://wa.me/250796023452" className="hero-btn">
-          Start Your Project
-        </a>
-      </section>
-
-      {/* SERVICES BY CATEGORY */}
-      {services.map((group,i)=>(
-        <section key={i} className="service-section">
-          <h2>
-            <i className={`fas ${group.icon}`}></i> {group.category}
-          </h2>
-
-          <div className="grid">
-            {group.items.map((item,j)=>(
-              <div className="card" key={j}>
-                <img src={item.img} alt={item.title}/>
-                <h3>{item.title}</h3>
-                <p className="price">{item.price}</p>
-                <a
-                  className="btn"
-                  href={`https://wa.me/250796023452?text=Hello I need ${item.title}`}
-                >
-                  Order Now
-                </a>
-              </div>
-            ))}
-          </div>
-        </section>
-      ))}
-    </>
-  );
-}
-
-
----
-
-4️⃣ About.js
-
-export default function About(){
-  return(
-    <section className="about">
-      <h2>Who We Are</h2>
-      <p>
-        A Better T Solutions is a Kigali-based creative and technology company.
-        We help individuals and businesses grow through design, websites,
-        Microsoft Office services and professional photography.
-      </p>
-
-      <div className="about-grid">
-        <img src="https://source.unsplash.com/500x400/?creative,team" />
-        <img src="https://source.unsplash.com/500x400/?design,office" />
-        <img src="https://source.unsplash.com/500x400/?technology,workspace" />
-      </div>
-    </section>
-  );
-}
-
-
----
-
-5️⃣ Contact.js
-
-export default function Contact(){
-  return(
-    <section className="contact">
-      <h2>Contact Us</h2>
-      <p>Kigali – Rwanda | 📞 0796023452</p>
-
-      <iframe
-        title="map"
-        src="https://maps.google.com/maps?q=kigali&t=&z=13&output=embed"
-      ></iframe>
-    </section>
-  );
-}
-
 
 ---
 
@@ -299,34 +71,40 @@ gap:20px}
 iframe{width:100%;height:300px;border:none}
 
 .whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;
-color:white;padding:16px;border-radius:50%;font-size:26px}
+color:white;padding:h16px;border-radius:50%;font-size:26px}
 
-.footer{text-align:center;background:#0f172a;color:white;padding:30px}
-.footer i{margin:0 10px;font-size:20px;color:#22c55e}
+.footer{text-align:center;:#;color:white;paddo.
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
----
+import "./styles.css";
 
-▶️ GUTANGIZA
+function App() {
+  return (
+    <Router>
+      {/* TOP NAVBAR */}
+      <Navbar />
 
-npx create-react-app abettert
-cd abettert
-npm install react-router-dom
-npm start
+      {/* MAIN ROUTES */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
+      {/* WHATSAPP FLOAT */}
+      <WhatsAppFloat />
 
----
+      {/* FOOTER */}
+      <Footer />
+    </Router>
+  );
+}
 
-🔥 ICYO UFITE UBU
-
-✔ 10 text animations
-✔ Logo
-✔ Services zose zitandukanye neza
-✔ Icons nyazo
-✔ Prices + Order Now
-✔ WhatsApp direct
-✔ Copyright
-✔ Premium look
-✔ Responsive hose
-
-Niba ushaka logo design, testimonials, cyangwa final marketing copy, mbwira uti 👉 “ongeramo …” ndabigushyiramo.
+export default App;
