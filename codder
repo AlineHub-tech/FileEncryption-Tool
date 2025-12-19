@@ -1,40 +1,117 @@
-import React from "react";
-import blog from "../assets/blog.png"
-import banner from "../assets/banner.png";
-import board from "../assets/board.jpeg"
-import book from "../assets/book.jpeg";
-import box from "../assets/box.jpg"
-import business from "../assets/business.png";
-import car from "../assets/car.jpg"
+// services.js
+import flyer from "../assets/flyer.jpeg";
 import card from "../assets/card.png";
-import commerce from "../assets/commerce.png"
-import display from "../assets/display.jpg";
-import docs from "../assets/docs.jpeg"
-import events from "../assets/events.png";
-import flyer from "../assets/flyer.jpeg"
 import greet from "../assets/greet.png";
-import info from "../assets/info.jpg";
-import logod from "../assets/logod.png";
-import micro from "../assets/micro.png";
-// import office from "../assets/office.png";
-import org from "../assets/org.png"
-import personal from "../assets/personal.png";
-import point from "../assets/point.png";
+import banner from "../assets/banner.png";
+import book from "../assets/book.jpeg";
 import poster from "../assets/poster.jpeg";
-import printi from "../assets/printi.png"
-import produ from "../assets/produ.png";
-import protrait from "../assets/protrait.png";
 import pull from "../assets/pull.png";
-import report from "../assets/report.png";
+import display from "../assets/display.jpg";
+import board from "../assets/board.jpeg";
+
+import tshirt from "../assets/t.png";
+import printi from "../assets/printi.png";
 import sign from "../assets/sign.jpg";
-import social from "../assets/social.jpeg";
-import t from "../assets/t.png";
 import vnyl from "../assets/vnyl.jpg";
+import car from "../assets/car.jpg";
 import window from "../assets/window.jpg";
 
+import logod from "../assets/logod.png";
+import social from "../assets/social.jpeg";
+import info from "../assets/info.jpg";
+import box from "../assets/box.jpg";
+
+import business from "../assets/business.png";
+import org from "../assets/org.png";
+import commerce from "../assets/commerce.png";
+import personal from "../assets/personal.png";
+import blog from "../assets/blog.png";
+
+import docs from "../assets/docs.jpeg";
+import micro from "../assets/micro.png";
+import point from "../assets/point.png";
+import report from "../assets/report.png";
+
+import events from "../assets/events.png";
+import produ from "../assets/produ.png";
+import protrait from "../assets/protrait.png";
 
 const services = [
   {
+    category: "Graphic & Print Design",
+    icon: "fa-palette",
+    items: [
+      { title: "Flyer Design", price: "400 – 2,000 RWF", img: flyer },
+      { title: "Business Cards", price: "150 – 8,000 RWF", img: card },
+      { title: "Greeting Cards", price: "from 1,200 RWF", img: greet },
+      { title: "Banners", price: "8,500 – 20,000 RWF", img: banner },
+      { title: "Booklet Printing", price: "from 3,000 RWF", img: book },
+      { title: "Posters", price: "from 3,500 RWF", img: poster },
+      { title: "Pull-Up Banners", price: "from 80,000 RWF", img: pull },
+      { title: "Display Boards", price: "from 15,000 RWF", img: display },
+      { title: "Light Box Ads", price: "from 180,000 RWF", img: board }
+    ]
+  },
+
+  {
+    category: "Branding & Promotional",
+    icon: "fa-bullhorn",
+    items: [
+      { title: "T-Shirt Printing", price: "from 6,500 RWF", img: tshirt },
+      { title: "Custom Mugs", price: "from 5,500 RWF", img: printi },
+      { title: "Acrylic Signs", price: "from 24,000 RWF", img: sign },
+      { title: "Vinyl Banners", price: "from 14,040 RWF", img: vnyl },
+      { title: "Car Branding", price: "from 5,762 RWF", img: car },
+      { title: "Window Decals", price: "from 15,000 RWF", img: window }
+    ]
+  },
+
+  {
+    category: "Digital & Creative Design",
+    icon: "fa-laptop",
+    items: [
+      { title: "Logo & Brand Identity", price: "from 80,000 RWF", img: logod },
+      { title: "Social Media Graphics", price: "from 50,000 RWF", img: social },
+      { title: "Infographic Design", price: "from 80,000 RWF", img: info },
+      { title: "Packaging Design", price: "from 100,000 RWF", img: box }
+    ]
+  },
+
+  {
+    category: "Web Development 🇷🇼",
+    icon: "fa-code",
+    items: [
+      { title: "Business Website", price: "300k – 600k RWF", img: business },
+      { title: "Corporate Website", price: "700k – 1.2M RWF", img: org },
+      { title: "E-Commerce Website", price: "800k – 2M RWF", img: commerce },
+      { title: "Personal Portfolio", price: "from 150k RWF", img: personal },
+      { title: "Blog / Media Website", price: "350k – 800k RWF", img: blog }
+    ]
+  },
+
+  {
+    category: "Microsoft Office Services",
+    icon: "fa-file-word",
+    items: [
+      { title: "Word Documents", price: "from 10,000 RWF", img: docs },
+      { title: "Excel Spreadsheets", price: "from 15,000 RWF", img: micro },
+      { title: "PowerPoint Slides", price: "from 20,000 RWF", img: point },
+      { title: "Reports & Data Entry", price: "Negotiable", img: report }
+    ]
+  },
+
+  {
+    category: "Photography & Media",
+    icon: "fa-camera",
+    items: [
+      { title: "Event Photography", price: "from 150,000 RWF", img: events },
+      { title: "Product Photography", price: "from 100,000 RWF", img: produ },
+      { title: "Portrait Photography", price: "from 80,000 RWF", img: protrait }
+    ]
+  }
+];
+
+export default services;  {
     category: "Graphic & Print Design",
     icon: "fa-palette",
     items: [
