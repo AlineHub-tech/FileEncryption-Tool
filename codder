@@ -1,296 +1,52 @@
-tact-info">
-        <div className="info-card">
-          <i className="fas fa-phone"></i>
-          <h3>Phone</h3>
-          <p>+250 796 023 452</p>
-        </div>
-
-        <div className="info-card">
-          <i className="fas fa-envelope"></i>
-          <h3>Email</h3>
-          <p>abettertsolutions@gmail.com</p>
-        </div>
-
-        <div className="info-card">
-          <i className="fas fa-location-dot"></i>
-          <h3>Location</h3>
-          <p>Kigali, Rwanda</p>
-        </div>
-
-        <div className="info-card">
-          <i className="fas fa-clock"></i>
-          <h3>Working Hours</h3>
-          <p>Mon – Sat | 8:00 AM – 6:00 PM</p>
-        </div>
-      </section>
-
-      {/* CONTACT FORM */}
-      <section className="contact-form">
-        <h2>Send Us a Message</h2>
-
-        <form>
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Your Email" />
-          <input type="text" placeholder="Service Needed" />
-          <textarea placeholder="Your Message"></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
-
-      {/* MAP */}
-      <section className="contact-map">
-        <h2>Our Location</h2>
-        <iframe
-          title="map"
-          src="https://maps.google.com/maps?q=kigali&t=&z=13&output=embed"
-        ></iframe>
-      </section>
-
-      {/* CTA */}
-      <section className="contact-cta">
-        <h2>Need Fast Response?</h2>
-        <a href="https://wa.me/250796023452" className="cta-btn">
-          Chat on WhatsApp
-        <
-
-8️⃣ styles.css (PREMIUM LOOK + ANIMATION)
-
-body{margin:0;font-family:Arial;background:#f8fafc}
-
-.navbar{display:flex;justify-content:space-between;align-items:center;
-padding:15px 30px;background:#0f172a;color:white}
-.logo{display:flex;align-items:center}
-.logo img{height:40px;margin-right:10px}
-.navbar a{color:#22c55e;margin-left:15px;text-decoration:none}
-
-.hero{text-align:center;padding:90px 20px;background:#020617;color:white}
-.animate{color:#22c55e;animation:pulse 2s infinite}
-@keyframes pulse{0%{opacity:.3}50%{opacity:1}100%{opacity:.3}}
-.hero-btn{margin-top:20px;display:inline-block;background:#22c55e;
-color:white;padding:14px 30px;border-radius:30px;text-decoration:none}
-
-.service-section{padding:60px 30px}
-.service-section h2{text-align:center;color:#0f172a}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;margin-top:30px}
-
-.card{background:white;border-radius:16px;padding:16px;
-box-shadow:0 15px 30px rgba(0,0,0,.1);transition:.3s}
-.card:hover{transform:translateY(-8px)}
-.card img{width:100%;border-radius:12px}
-
-.price{color:#16a34a;font-weight:bold}
-.btn{display:block;margin-top:10px;background:#16a34a;
-color:white;padding:10px;text-align:center;border-radius:8px;text-decoration:none}
-
-.about,.contact{text-align:center;padding:70px 20px}
-.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px}
-
-iframe{width:100%;height:300px;border:none}
-
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;
-color:white;padding:h16px;border-radius:50%;font-size:26px}
-
-.footer{text-align:center;:#;color:white;paddo.
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import WhatsAppFloat from "./components/WhatsAppFloat";
-
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-
-import "./styles.css";
-
-function App() {
+import React from "react";
+import blog from "../assets/blog.png"
+import banner from "../assets/banner.png";
+import board from "../assets/board.jpeg"
+import book from "../assets/book.jpeg";
+import box from "../assets/box.jpg"
+import business from "../assets/business.png";
+import car from "../assets/car.jpg"
+import card from "../assets/card.png";
+import commerce from "../assets/commerce.png"
+import display from "../assets/display.jpg";
+import docs from "../assets/docs.jpeg"
+import events from "../assets/events.png";
+import flyer from "../assets/flyer.jpeg"
+import greet from "../assets/greet.png";
+import info from "../assets/info.jpg";
+import logod from "../assets/logod.png";
+import micro from "../assets/micro.png";
+// import office from "../assets/office.png";
+import org from "../assets/org.png"
+import personal from "../assets/personal.png";
+import point from "../assets/point.png";
+import poster from "../assets/poster.jpeg";
+import printi from "../assets/printi.png"
+import produ from "../assets/produ.png";
+import protrait from "../assets/protrait.png";
+import pull from "../assets/pull.png";
+import report from "../assets/report.png";
+import sign from "../assets/sign.jpg";
+import social from "../assets/social.jpeg";
+import t from "../assets/t.png";
+import vnyl from "../assets/vnyl.jpg";
+import window from "../assets/window.jpg";
 
 
-🎨 FINAL CSS – ABOUT & CONTACT (PREMIUM)
-
-/* ========== GLOBAL HELPERS ========== */
-.about-page,
-.contact-page {
-  background: #f8fafc;
-  color: #0f172a;
-}
-
-/* ========== HERO SECTIONS ========== */
-.about-hero,
-.contact-hero {
-  min-height: 60vh;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #020617, #0f172a);
-  color: white;
-  text-align: center;
-  animation: fadeIn 1.2s ease;
-}
-
-.about-hero h1,
-.contact-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-}
-
-.about-hero span,
-.contact-hero span {
-  color: #22c55e;
-}
-
-.about-hero p,
-.contact-hero p {
-  max-width: 700px;
-  margin: 20px auto 0;
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
-/* ========== SECTIONS ========== */
-.about-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  padding: 80px 8%;
-  align-items: center;
-}
-
-.about-section img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.15);
-  animation: slideUp 1s ease;
-}
-
-.about-text h2 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-}
-
-.about-text p {
-  line-height: 1.7;
-  margin-bottom: 12px;
-  color: #334155;
-}
-
-/* ========== WHY US ========== */
-.why-us {
-  background: white;
-  padding: 80px 6%;
-  text-align: center;
-}
-
-.why-us h2 {
-  font-size: 2.4rem;
-  margin-bottom: 40px;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 30px;
-}
-
-.why-card {
-  padding: 30px 20px;
-  border-radius: 18px;
-  background: #f1f5f9;
-  transition: .4s;
-  animation: slideUp .9s ease;
-}
-
-.why-card i {
-  font-size: 32px;
-  color: #22c55e;
-  margin-bottom: 15px;
-}
-
-.why-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(0,0,0,.15);
-}
-
-/* ========== PROCESS ========== */
-.process {
-  padding: 90px 6%;
-  background: #020617;
-  color: white;
-  text-align: center;
-}
-
-.process h2 {
-  font-size: 2.3rem;
-  margin-bottom: 40px;
-}
-
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-}
-
-.process-step {
-  padding: 35px 25px;
-  border-radius: 18px;
-  background: rgba(255,255,255,.08);
-  backdrop-filter: blur(6px);
-  transition: .4s;
-}
-
-.process-step span {
-  font-size: 42px;
-  color: #22c55e;
-  font-weight: bold;
-}
-
-.process-step:hover {
-  transform: translateY(-10px);
-  background: rgba(255,255,255,.15);
-}
-
-/* ========== SERVICES SUMMARY ========== */
-.about-services {
-  padding: 80px 6%;
-  background: white;
-  text-align: center;
-}
-
-.about-service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
-
-.about-service-grid div {
-  padding: 20px;
-  background: #f8fafc;
-  border-radius: 14px;
-  font-weight: 600;
-  transition: .3s;
-
-}
-
-.about-service-grid i {
-  color: #22c55e;
-  margin-right: 8px;
-}
-
-.about-service-grid div:hover {
-  transfo.
 const services = [
   {
     category: "Graphic & Print Design",
     icon: "fa-palette",
     items: [
-      {title:"Flyer Design", price:"from 400 RWF", img:"https://source.unsplash.com/400x300/?flyer,design"},
-      {title:"Business Cards", price:"from 150 RWF", img:"https://source.unsplash.com/400x300/?business,cards"},
-      {title:"Greeting Card Printing", price:"from 1,200 RWF", img:"https://source.unsplash.com/400x300/?greeting,card"},
-      {title:"Booklet Printing", price:"from 3,000 RWF", img:"https://source.unsplash.com/400x300/?booklet,print"},
-      {title:"Posters", price:"from 3,500 RWF", img:"https://source.unsplash.com/400x300/?poster,print"},
-      {title:"Pull Up Banners", price:"from 80,000 RWF", img:"https://source.unsplash.com/400x300/?pullup,banner"},
-      {title:"Display Boards", price:"from 15,000 RWF", img:"https://source.unsplash.com/400x300/?display,board"},
-      {title:"Light Box Advertising", price:"from 180,000 RWF", img:"https://source.unsplash.com/400x300/?lightbox,sign"}
+      { title:"Flyer Design", price:"from 400 - 2,000 RWF", img:flyer },
+      { title:"Business Cards", price:"from 150 - 8,000 RWF", img: card },
+      { title:"Greeting Card Printing", price:"from 1,200 RWF", img: greet },
+      { title:"Banner", price:"from 8,500 - 20,000 RWF", img: banner },
+      { title:"Booklet Printing", price:"from 3,000 RWF", img: book },
+      { title:"Posters", price:"from 3,500 RWF", img: poster },
+      { title:"Pull Up Banners", price:"from 80,000 RWF", img: pull },
+      { title:"Display Boards", price:"from 15,000 RWF", img:display },
+      { title:"Light Box Advertising", price:"from 180,000 RWF", img:board }
     ]
   },
 
@@ -298,12 +54,12 @@ const services = [
     category: "Branding & Promotional",
     icon: "fa-bullhorn",
     items: [
-      {title:"T-Shirt Printing", price:"from 6,500 RWF", img:"https://source.unsplash.com/400x300/?tshirt,printing"},
-      {title:"Custom Mugs", price:"from 5,500 RWF", img:"https://source.unsplash.com/400x300/?custom,mug"},
-      {title:"Acrylic Board Signs", price:"from 24,000 RWF", img:"https://source.unsplash.com/400x300/?acrylic,sign"},
-      {title:"Vinyl Banners", price:"from 14,040 RWF", img:"https://source.unsplash.com/400x300/?vinyl,banner"},
-      {title:"Car Magnets", price:"from 5,762 RWF", img:"https://source.unsplash.com/400x300/?car,magnet"},
-      {title:"Window Decals", price:"from 15,000 RWF", img:"https://source.unsplash.com/400x300/?window,decals"}
+      { title:"T-Shirt Printing", price:"from 6,500 RWF", img:t},
+      { title:"Custom Mugs", price:"from 5,500 RWF", img:printi },
+      { title:"Acrylic Board Signs", price:"from 24,000 RWF", img:sign},
+      { title:"Vinyl Banners", price:"from 14,040 RWF", img:vnyl},
+      { title:"Car Magnets", price:"from 5,762 RWF", img:car},
+      { title:"Window Decals", price:"from 15,000 RWF", img:window }
     ]
   },
 
@@ -311,10 +67,10 @@ const services = [
     category: "Digital & Creative Design",
     icon: "fa-laptop",
     items: [
-      {title:"Logo & Brand Identity Design", price:"from 80,000 RWF", img:"https://source.unsplash.com/400x300/?logo,branding"},
-      {title:"Social Media Graphics", price:"from 50,000 RWF", img:"https://source.unsplash.com/400x300/?social,media,design"},
-      {title:"Infographic Design", price:"from 80,000 RWF", img:"https://source.unsplash.com/400x300/?infographic,design"},
-      {title:"Packaging Design", price:"from 100,000 RWF", img:"https://source.unsplash.com/400x300/?packaging,design"}
+      { title:"Logo & Brand Identity Design", price:"from 80,000 RWF", img:logod },
+      { title:"Social Media Graphics", price:"from 50,000 RWF", img:social},
+      { title:"Infographic Design", price:"from 80,000 RWF", img:info },
+      { title:"Packaging Design", price:"from 100,000 RWF", img:box }
     ]
   },
 
@@ -322,10 +78,12 @@ const services = [
     category: "Web Development 🇷🇼",
     icon: "fa-code",
     items: [
-      {title:"Basic Business Website", price:"300,000 – 600,000 RWF", img:"https://source.unsplash.com/400x300/?small,business,website"},
-      {title:"Corporate Website", price:"700,000 – 1,200,000 RWF", img:"https://source.unsplash.com/400x300/?corporate,website"},
-      {title:"E-Commerce Website", price:"800,000 – 2,000,000 RWF", img:"https://source.unsplash.com/400x300/?ecommerce,website"},
-      {title:"Custom Web Application", price:"1,500,000+ RWF", img:"https://source.unsplash.com/400x300/?web,application"}
+      { title:"Basic Business Website", price:"300,000 – 600,000 RWF", img:business },
+      { title:"Corporate Website", price:"700,000 – 1,200,000 RWF", img:org },
+      { title:"E-Commerce Website", price:"800,000 – 2,000,000 RWF", img:commerce },
+      // { title:"Custom Web Application", price:"1,500,000+ RWF", img: },
+      { title:"Personal Portfolio", price:"150,000+ RWF", img: personal },
+      { title:"Blog & Entertainment Web", price:"350,000 - 800,000 RWF", img: blog }
     ]
   },
 
@@ -333,10 +91,10 @@ const services = [
     category: "Microsoft Office Services",
     icon: "fa-file-word",
     items: [
-      {title:"Microsoft Word Documents", price:"from 10,000 RWF", img:"https://source.unsplash.com/400x300/?microsoft,word"},
-      {title:"Microsoft Excel Spreadsheets", price:"from 15,000 RWF", img:"https://source.unsplash.com/400x300/?microsoft,excel"},
-      {title:"PowerPoint Presentations", price:"from 20,000 RWF", img:"https://source.unsplash.com/400x300/?powerpoint,presentation"},
-      {title:"Data Entry & Reports", price:"Negotiable", img:"https://source.unsplash.com/400x300/?data,entry"}
+      { title:"Microsoft Word Documents", price:"from 10,000 RWF", img:docs },
+      { title:"Microsoft Excel Spreadsheets", price:"from 15,000 RWF", img:micro },
+      { title:"PowerPoint Presentations", price:"from 20,000 RWF", img:point },
+      { title:"Data Entry & Reports", price:"Negotiable", img:report }
     ]
   },
 
@@ -344,9 +102,9 @@ const services = [
     category: "Photography & Media",
     icon: "fa-camera",
     items: [
-      {title:"Event Photography", price:"from 150,000 RWF", img:"https://source.unsplash.com/400x300/?event,photography"},
-      {title:"Product Photography", price:"from 100,000 RWF", img:"https://source.unsplash.com/400x300/?product,photography"},
-      {title:"Portrait Photography", price:"from 80,000 RWF", img:"https://source.unsplash.com/400x300/?portrait,photography"}
+      { title:"Event Photography", price:"from 150,000 RWF", img:events },
+      { title:"Product Photography", price:"from 100,000 RWF", img:produ },
+      { title:"Portrait Photography", price:"from 80,000 RWF", img:protrait}
     ]
   }
 ];
